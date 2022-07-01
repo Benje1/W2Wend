@@ -3,3 +3,9 @@ class Guest:
         self.name = _name
         self.wallet = _wallet
         self.fav_song = _fav_song
+
+    def check_wallet(self, cash):
+        return self.wallet >= cash
+
+    def remove_money_from_wallet(self, cash):
+        self.wallet -= cash

@@ -36,3 +36,9 @@ class TestKaraokeBar(unittest.TestCase):
         self.karaoke_bar.room_guest_check_in(self.guest4)
         self.assertEqual(3, len(self.room2.list_of_guests))
         self.assertEqual(1, len(self.room1.list_of_guests))
+    
+    def test_guests_pay_for_entry(self):
+        self.karaoke_bar.add_room(self.room2)
+        self.karaoke_bar.room_guest_check_in(self.guest1)
+        self.karaoke_bar.room_guest_check_in(self.guest2)
+        self.assertEqual(20, self.karaoke_bar.till)
