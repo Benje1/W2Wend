@@ -23,4 +23,5 @@ class KaraokeBar:
     #         if len(room.list_of_guests) < room.max_capacity:
     #             room.check_guest_in(guest)
     #             self.guests_in_bar.pop()
+    #             return
 
